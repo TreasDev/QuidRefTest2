@@ -1,5 +1,4 @@
 *{
-  background-color: yellow;
   font-family: monospace;
 }
 #banner{
@@ -9,8 +8,30 @@
   width: 100%;
   margin-top: 0px;
   height: 90px;
+  justify-content: fill;
 }
-#name{
+footer{
+  background-color: #88001B;
+  color: #EC1C24;
+  text-align: center;
+  text-decoration: none;
+}
+.twit{
+  text-decoration: none;
+}
+.twit:link{
+  color: #EC1C24;
+}
+.twit:visited{
+  color: #EC1C24;
+}
+.twit:hover{
+  color: white;
+}
+/*index.html */
+
+/*qn.html*/
+#quest{
   width: 100%;
   text-align: center;
   font: console;
