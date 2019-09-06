@@ -29,7 +29,36 @@ footer{
   color: white;
 }
 /*index.html */
-
+#pg-grid{
+  display: grid;
+  grid-template-columns: 15% 70% 15%;
+  grid-template-rows: 20% 60% 20%;
+}
+#title{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  text-align: center;
+}
+#q-info{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 2;
+}
+#start{
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 3;
+}
+#but-start{
+  justify-content: fill;
+  background-color: green;
+  color: white;
+  width: 100%;
+}
 /*qn.html*/
 #quest{
   width: 100%;
