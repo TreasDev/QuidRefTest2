@@ -60,12 +60,55 @@ footer{
   width: 100%;
 }
 /*qn.html*/
-#quest{
+.quiz-cont{
+  display: grid;
+  grid-template-columns: 15% 35% 35% 15%;
+  grid-template-rows: 10% 70% 10% 10%;
+  grid-template-areas:
+    '. q q .'
+    '. gif gif .'
+    '. sc sc .'
+    '. yb nb .'
+}
+.quest{
+  grid-area: q;
   width: 100%;
   text-align: center;
   font: console;
 }
-#yes{
+.player-cont{
+  grid-area: gif;
+}
+.player{
+  display: block;
+  object-fit: contain;
+  margin: auto auto auto auto;
+  align: center;
+}
+.scre{
+  grid-area: sc;
+  text-align: center;
+  padding-top: auto;
+}
+.yes{
+  grid-area: yb;
+  margin-top: 15px;
+}
+.but-yes{
+  width: 100%;
+  background-color: green;
+  color: white;
+}
+.no{
+  grid-area: nb;
+  margin-top: 15px;
+}
+.but-no{
+  width: 100%;
+  background-color: red;
+  color: white;
+}
+/*#yes{
   padding-top: 10px;
   width: 50%;
   float: left;
@@ -91,4 +134,4 @@ footer{
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
-}
+}*/

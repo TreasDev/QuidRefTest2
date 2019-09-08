@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QuidRefTest2</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="BP-icon.png">
+    <script>
+      var i = 0
+      var score = 0
+      var source = ['https://giphy.com/embed/l1D8H0PAU2CFLYEuiH',
+                    'https://giphy.com/embed/gIelRXqsehpglqcPLt',
+                    'https://giphy.com/embed/TdXRnvLgPrDi6ZPc5F',
+                    'https://giphy.com/embed/jn8AwjUv4oKbA3m6AD',
+                    'https://giphy.com/embed/ln1d5zjrV08ZLSrQeD']
+      var yesButton = ['Correct \nThe foul is : Shirt pulling (Standard Contact Penalty) \nThe Penalty is: Yellow Card',
+                       'Correct \nThe foul is : Illegally contacting an opponent with a held bludger \nThe Penalty is: Blue Card',
+                       'Correct \nThe foul is : Neck Contact (Standard Contact Penalty) \nThe Penalty is: Yellow Card',
+                       'Correct \nThe foul is : Back Contact (Standard Contact Penalty) \nThe Penalty is: Yellow Card',
+                       'Correct \nThe foul is : Contact from behind (Minor) \nThe Penalty is: Back to hoops']
+      var noButton  = ['Incorrect \nThe foul is : Shirt pulling (Standard Contact Penalty) \nThe Penalty is: Yellow Card',
+                       'Incorrect \nThe foul is : Illegally contacting an opponent with a held bludger \nThe Penalty is: Blue Card',
+                       'Incorrect \nThe foul is : Neck Contact (Standard Contact Penalty) \nThe Penalty is: Yellow Card',
+                       'Incorrect \nThe foul is : Back Contact (Standard Contact Penalty) \nThe Penalty is: Yellow Card',
+                       'Incorrect \nThe foul is : Contact from behind (Minor) \nThe Penalty is: Back to hoops']
+      var vidLink = ['https://youtu.be/dzjLsffrqoI?t=4260',]
+      var cor = [1, 1, 1, 1, 1] //1 if foul, 0 if no foul
+      function butfunc(buttonlist){
+        //display output
+        alert(buttonlist[i]);
+        if(cor[i] == 1){
+          score +=1;
+        }
+        //next iteration
+        i +=1;
+        if(i < source.length){
+        //set up next question
+        //gif
+        document.getElementById('gifplayer').src = source[i];
+        document.getElementById('vid-lnk').href = vidLink[i];
+        //update score
+        document.getElementById('score').innerHTML = 'Score = ' + score.toString() + '/' + i.toString();
+        }else{
+          alert('Final Score: ' + score + '/' + i);
+          window.location.href = 'https://gayyoda.github.io/QuidRefTest2/';
+        };
+      }
+    </script>
+  </head>
+ <div id="banner">
+    <img src="coverimg.png" alt = "Logo Banner" id= "logo-banner">
+  </div>
+  <div class="quiz-cont">
+    <div class="quest">
+      <h3>Is there a foul on the Quaffle play?</h3>
+    </div>
+    <div class="player-cont">
+      <iframe id="gifplayer" class="player" src="https://giphy.com/embed/l1D8H0PAU2CFLYEuiH" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </div>
+   <div class="scre"><p id="score">Score = 0</p></div>
+    <div class="yes"><button class="but-yes" onClick="butfunc(yesButton)">Yes</button></div>
+    <div class="no"><button class="but-no" onClick="butfunc(noButton)">No</button></div>
+  </div>
+  <footer>
+    <p>Images from <a id="vid-lnk" href="https://youtu.be/dzjLsffrqoI?t=4260" target="_blank" class="twit">here</a></p>
+    <p><a class="twit" href="https://twitter.com/TreasDev" target="_blank">Twitter</a></p>
+    <p id="copyright">&copy; 2019, Alex Healey</p>
+  </footer>
+</html>
