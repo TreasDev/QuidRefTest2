@@ -30,8 +30,9 @@
                        'Incorrect \nThe foul is : Back Contact (Standard Contact Penalty) \nThe Penalty is: Yellow Card',
                        'Incorrect \nThe foul is : Contact from behind (Minor) \nThe Penalty is: Back to hoops']
       var vidLink = ['https://youtu.be/dzjLsffrqoI?t=4260',]
-      var cor = [1, 1, 1, 1, 1] //1 if foul, 0 if no foul
-      function butfunc(buttonlist){
+      var corYes = [1, 1, 1, 1, 1] //1 if foul, 0 if no
+      var corNo = [0, 0, 0, 0, 0]
+      function butfunc(buttonlist, cor){
         //display output
         alert(buttonlist[i]);
         if(cor[i] == 1){
@@ -64,8 +65,8 @@
       <iframe id="gifplayer" class="player" src="https://giphy.com/embed/l1D8H0PAU2CFLYEuiH" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
     </div>
    <div class="scre"><p id="score">Score = 0</p></div>
-    <div class="yes"><button class="but-yes" onClick="butfunc(yesButton)">Yes</button></div>
-    <div class="no"><button class="but-no" onClick="butfunc(noButton)">No</button></div>
+    <div class="yes"><button class="but-yes" onClick="butfunc(yesButton, corYes)">Yes</button></div>
+    <div class="no"><button class="but-no" onClick="butfunc(noButton, corNo)">No</button></div>
   </div>
   <footer>
     <p>Images from <a id="vid-lnk" href="https://youtu.be/dzjLsffrqoI?t=4260" target="_blank" class="twit">here</a></p>
