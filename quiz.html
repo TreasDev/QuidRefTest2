@@ -46,9 +46,12 @@
         document.getElementById('gifplayer').src = source[i];
         document.getElementById('vid-lnk').href = vidLink[i];
         //update score
-        document.getElementById('score').innerHTML = 'Score = ' + score.toString() + '/' + i.toString();
+        document.getElementById('score').innerHTML = 'Score = ' + score + '/' + i; //fraction score
+
         }else{
-          alert('Final Score: ' + score + '/' + i);
+          alert('Final Score: ' + score + '/' + i
+                + ' (' + ((score/i)*100).toPrecision(3) + '%)' //percentage
+               );
           window.location.href = 'https://gayyoda.github.io/QuidRefTest2/';
         };
       }
